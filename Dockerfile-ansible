@@ -1,0 +1,10 @@
+FROM mmumshad/ubuntu-ssh-enabled
+
+RUN mkdir -p /var/run/sshd; apt-get update; \
+    apt-get install -y software-properties-common python-software-properties; \
+		apt-add-repository ppa:ansible/ansible ; \
+		apt-get update; apt-get install -y ansible; \
+		rm -rf /var/lib/apt/lists/*; \
+		sed -i '/^#.*host_key_checking/s/^#//' /etc/ansible/ansible.cfg
+
+ADD inventory.txt /etc/ansible/hosts

@@ -1,0 +1,3 @@
+[targets]
+target[1:3] ansible_ssh_pass=Passw0rd
+
