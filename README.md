@@ -30,13 +30,13 @@ ssh -p 2222 root@localhost
 This will get you into the ansible container. The network will already be set up using Docker's internal DNS and networking, and you can already ping the the target hosts w/o any additional set up:
 
 ````
-My-Mac:easy-ansible-test rtoren$ docker-compose up -d
+My-Mac:easy-ansible-test $ docker-compose up -d
 Creating network "easyansibletest_default" with the default driver
 Creating easyansibletest_target2_1
 Creating easyansibletest_target1_1
 Creating easyansibletest_target3_1
 Creating easyansibletest_ansible_1
-My-Mac:easy-ansible-test rtoren$ ssh -p 2222 root@localhost
+My-Mac:easy-ansible-test $ ssh -p 2222 root@localhost
 root@localhost's password:
 Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.9.87-linuxkit-aufs x86_64)
 
@@ -70,7 +70,7 @@ target2 | SUCCESS => {
 
 To bring down the containers and free up their resources, just do:
 ````
-docker-container down
+docker-compose down
 ````
 
 
