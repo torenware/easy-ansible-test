@@ -3,7 +3,13 @@ This demonstrates a quick Docker Compose set up to get up an ansible host and 3 
 in [Mumshad Mannambeth's Udemy course on Advanced Ansible](https://www.udemy.com/learn-ansible-advanced/learn/v4/overview).  Mumshad has a Docker image that didn't quite work for me, so I "fixed it" with a
 couple of Dockerfiles and setting up Docker Compose to use them.
 
-###How To Use This
+---
+##### Quick Warning
+
+This is a toy install and does a number of things you'd never want to do on a production install. It uses passwords (this is from Mumshad's image), and I've disabled host key checking so that ansible can immediately talk to its targets; this is also *not* best practice. You should only use this configuration on your laptop or local system, making sure that the outside world cannot access it. But it should be fine for learning ansible w/o using too much memory or other resources.
+
+---
+### How To Use This
 
 Using this is pretty simple, assuming you've installed Docker and Docker Compose (you get Docker Compose automatically on the Mac and Windows; on Linux it's an additional install). Once you've done that:
 
